@@ -7,10 +7,18 @@ import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { environment } from "src/environments/environment";
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { PostComponent } from './Main/post/post.component';
+import { HomeComponent } from './Main/home/home.component';
+import { TagComponent } from './Main/tag/tag.component';
+import { CategoryComponent } from './Main/category/category.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    PostComponent,
+    CategoryComponent,
+    TagComponent
   ],
   imports: [
     BrowserModule,
