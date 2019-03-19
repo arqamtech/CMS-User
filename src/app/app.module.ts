@@ -11,6 +11,10 @@ import { PostComponent } from './Main/post/post.component';
 import { HomeComponent } from './Main/home/home.component';
 import { TagComponent } from './Main/tag/tag.component';
 import { CategoryComponent } from './Main/category/category.component';
+import { PostService } from './Services/Posts/post.service';
+import { LoginComponent } from './Auth/login/login.component';
+import { SignUpComponent } from './Auth/sign-up/sign-up.component';
+import { AuthService } from './Services/Auth/auth.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,9 @@ import { CategoryComponent } from './Main/category/category.component';
     HomeComponent,
     PostComponent,
     CategoryComponent,
-    TagComponent
+    TagComponent,
+    LoginComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +34,10 @@ import { CategoryComponent } from './Main/category/category.component';
     AngularFirestoreModule,
     AngularFireAuthModule,
   ],
-  providers: [],
+  providers: [
+    PostService,
+    AuthService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
